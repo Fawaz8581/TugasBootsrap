@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeStyle Vibes</title>
+    <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #d7d7d7, #efefef);
+            color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav {
+            padding: 10px 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #636366, #636366);
+            color: #f8f9fa;
+        }
+
+        nav::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: blue;
+            animation: runningBorder 2s linear infinite;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-color: blue;
+            border-color: blue;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; 
+            border-color: #0056b3;
+        }
+
+        @keyframes runningBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel {
+            position: relative;
+            height: 100vh;
+        }
+
+        .carousel .carousel-inner {
+            height: 100%;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card img {
+            transition: transform 0.3s ease;
+            position: relative;
+            width: 100%;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #636366, #636366);
+            color: #f8f9fa;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: blue;
+            animation: runningBorder 2s linear infinite;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background-color: blue;
+            animation: runningBorderVertical 2s linear infinite;
+        }
+
+        @keyframes runningBorderVertical {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .dark-title {
+            color: #333; 
+        }
+
+        .trend-box {
+            background-color: #636366; 
+            color: #ffffff; 
+            padding: 10px 15px; 
+            border-radius: 5px; 
+            margin: 5px; 
+            min-width: 150px; 
+            text-align: center; 
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center; 
+        }
+
+        .footer-text {
+            font-size: 20px; 
+            color: #ffffff; 
+            text-align: center; 
+            margin: 0; 
+            padding: -5px; 
+        }
+
+        .subscribe-section {
+            background: linear-gradient(135deg, var(--darker-bg), #1a1a1a);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="nav-link" href="#">LifeStyle Vibes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Healthy-Recipes">Healthy Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Health-Trend">Health Trends Over Time</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="joinus.html">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4">
+        <!-- Carousel Section -->
+        <div id="healthCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?s=612x612&w=0&k=20&c=v48RE0ZNWpMZOlSp13KdF1yFDmidorO2pZTu2Idmd3M=" class="d-block w-100" alt="Healthy Eating">
+                    <div class="caption">Eating a balanced diet rich in fruits, vegetables, and whole grains promotes overall health.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.healthyfood.com/wp-content/uploads/2016/11/Are-you-as-healthy-as-you-think-iStock-1140193165.jpg" class="d-block w-100" alt="Fitness Routine">
+                    <div class="caption">Regular physical activity is essential for maintaining a healthy body and mind.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dezerv-strapi-test.s3.ap-south-1.amazonaws.com/The_Real_Cost_of_Living_a_Healthy_Lifestyle_e2c4212e3b.jpg" class="d-block w-100" alt="Mental Wellness">
+                    <div class="caption">Mental wellness is just as important as physical health; practice self-care and mindfulness.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i0.wp.com/www.cosmoderma.it/wp-content/uploads/2023/02/Well-aging-cosa-e-1.jpeg?fit=2560%2C1707&ssl=1" class="d-block w-100" alt="Aging Well">
+                    <div class="caption">Aging well requires a focus on both physical and mental health.</div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#healthCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Healthy Recipes Section -->
+        <section id="Healthy-Recipes" class="mt-4"> 
+            <h2 class="dark-title">Healthy Recipes</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh5d-ZLSzGRF6HDdYEyo0X6YhEd08hmo6Rdg&s" class="card-img-top" alt="Healthy Salad">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Salad</h5>
+                            <p class="card-text">A fresh salad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBEwCEN7e65QZtqKdibxeJ4G6pHBAOnrk3hA&s" class="card-img-top" alt="Peach Smoothie">
+                        <div class="card-body">
+                            <h5 class="card-title">Peach Smoothie</h5>
+                            <p class="card-text">A healthy peach smoothie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.skinnytaste.com/wp-content/uploads/2015/01/Avocado-Toast-with-Egg-7-500x500.jpg" class="card-img-top" alt="Avocado Toast">
+                        <div class="card-body">
+                            <h5 class="card-title">Avocado Toast</h5>
+                            <p class="card-text">Delicious avocado toast.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Health Trends Section -->
+        <section id="Health-Trend" class="mt-4">
+            <h2 class="dark-title">Health Trends Over Time</h2>
+            <div class="chart-container">
+                <canvas id="healthTrendChart" width="400" height="200"></canvas>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('healthTrendChart').getContext('2d');
+        const healthTrendChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Exercise (mins)',
+                    data: [120, 130, 150, 170, 140, 160, 180],
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    fill: true,
+                }, {
+                    label: 'Fruit Intake (servings)',
+                    data: [4, 5, 5, 6, 5, 7, 8],
+                    borderColor: 'green',
+                    backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                    fill: true,
+                }, {
+                    label: 'Sleep (hours)',
+                    data: [6, 7, 7, 8, 8, 7, 7],
+                    borderColor: 'orange',
+                    backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Health Trends Over Time'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="subscribe-section text-center">
+        <hgroup>
+            <h2>Join Our Community</h2>
+            <h3>Subscribe for the latest updates in wellness, fashion, and mindful living.</h3>
+        </hgroup>
+        <form class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                <button type="submit" class="btn btn-primary" onclick="event.preventDefault()">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="text-center py-3 text-light" style="background-color: #636366;">
+        <div>
+            <p class="footer-text">&copy; 2024 LifeStyle Vibes.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
